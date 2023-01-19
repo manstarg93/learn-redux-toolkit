@@ -1,9 +1,17 @@
 import React from 'react';
 
 import './App.css';
+import CartContainer from './features/cart/CartContainer';
+
+import NavBar from './features/nav/NavBar';
 
 function App() {
-  return <div className="App">Redux toolkit</div>;
+  return (
+    <main className="main">
+      <NavBar />
+      <CartContainer />
+    </main>
+  );
 }
 
 export default App;
