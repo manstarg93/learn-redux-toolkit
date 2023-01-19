@@ -5,15 +5,11 @@ import {
   NavBarContainer,
 } from './NavBar.styles';
 import { IoMdBasket } from 'react-icons/io';
-import { useAppDispatch, useAppSelector } from '../../hooks/reduxHooks';
-import { useEffect } from 'react';
-import { updateCart } from '../cart/cartSlice';
+import { useAppSelector } from '../../hooks/reduxHooks';
+
 const NavBar = () => {
   const { amount } = useAppSelector((state) => state.cart);
-  const dispatch = useAppDispatch();
-  useEffect(() => {
-    dispatch(updateCart());
-  }, []);
+
   return (
     <NavBarContainer>
       <CartLogo>Redux-Cart</CartLogo>
